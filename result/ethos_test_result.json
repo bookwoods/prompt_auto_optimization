@@ -1,0 +1,223 @@
+{
+  "prompts": [
+    "You are given a comment text. Your task is to analyze the text and determine whether it contains hate speech. Hate speech includes any language that incites violence, expresses hatred or discrimination against a group of people based on attributes such as race, religion, gender, or other identity factors. \n\nLet's think step by step:\n1. Analyze the comment text to identify any derogatory terms, threats, or language targeting specific groups.\n2. Consider the context of these terms and how they're used in the sentence.\n3. Determine whether the language used can incite violence or promote hatred against a group.\n4. In ambiguous cases, aim for a neutral interpretation but closely assess against criteria for hate speech.\n\nOutput your response as follows: \n- If the comment contains hate speech, output the number `1`.\n- If the comment does not contain hate speech, output the number `0`.\n\nReturn the result wrapped in `<answer>...</answer>` tags. \nFor example: `<answer>1</answer>` if hate speech is present, or `<answer>0</answer>` if it is not.",
+    "You are given a comment text. Your task is to analyze the text and determine whether it contains hate speech. Hate speech includes any language that incites violence, expresses hatred, or discrimination against a group of people based on attributes such as race, religion, gender, or other identity factors.\n\nLet's think step by step:\n1. Analyze the comment text to identify any derogatory terms, threats, or language targeting specific groups.\n2. Consider the context of these terms and how they're used in the sentence, including sarcasm or implications.\n3. Determine whether the language used can incite violence or promote hatred against a group.\n4. In ambiguous cases, carefully weigh the context and intentions. Default to a non-hate interpretation unless clear indicators of hate speech presence are shown.\n\nOutput your result in the specified format:\n- If the comment contains hate speech, output `<answer>1</answer>`.\n- If the comment does not contain hate speech, output `<answer>0</answer>`.",
+    "You are given a comment text. Your task is to analyze the text and determine whether it contains hate speech. Hate speech includes any language that incites violence, expresses hatred, or discrimination against a group of people based on attributes such as race, religion, gender, or other identity factors.\n\nLet's think step by step:\n1. Analyze the comment text to identify any derogatory terms, threats, or language targeting specific groups.\n2. Consider the context of these terms and how they're used in the sentence, including sarcasm or other implications.\n3. Determine whether the language used can incite violence or promote hatred against a group.\n4. In ambiguous cases, carefully weigh the context and intentions. Default to a non-hate interpretation unless there are clear indicators of the presence of hate speech.\n\nOutput your result strictly in the specified format without additional explanations:\n- If the comment contains hate speech, output `<answer>1</answer>`.\n- If the comment does not contain hate speech, output `<answer>0</answer>`.",
+    "You are given a comment text. Your task is to analyze the text and determine whether it contains hate speech. Hate speech includes any language that incites violence, expresses hatred, or discriminates against a group of people based on attributes such as race, religion, gender, or other identity factors.\n\nLet's think step by step:\n1. Analyze the comment text to identify any derogatory terms, threats, or language targeting specific groups.\n2. Consider the context of these terms and how they're used in the sentence, including sarcasm or other implications.\n3. Determine whether the language used can incite violence or promote hatred against a group.\n4. In cases of ambiguity, analyze the implications and subtleties carefully to avoid overlooking potential hate speech. Give preference to a more cautious interpretation favoring detection.\n\nOutput your result strictly in the specified format without additional explanations:\n- If the comment contains hate speech, output `<answer>1</answer>`.\n- If the comment does not contain hate speech, output `<answer>0</answer>`.",
+    "You are given a comment text. Your task is to analyze the text and determine whether it contains hate speech. Hate speech includes any language that incites violence, expresses hatred, or discriminates against a group of people based on attributes such as race, religion, gender, or other identity factors.\n\nLet's think step by step:\n1. Analyze the comment text to identify any derogatory terms, threats, or language targeting specific groups.\n2. Consider the context of these terms and how they're used in the sentence, including sarcasm or other implications.\n3. Determine whether the language used can incite violence or promote hatred against a group.\n4. In cases of ambiguity, analyze the implications and subtleties carefully to avoid overlooking potential hate speech. Give preference to a more cautious interpretation favoring detection.\n\nOutput your result strictly in the specified format without additional explanations:\n- If the comment contains hate speech, output `<answer>1</answer>`.\n- If the comment does not contain hate speech, output `<answer>0</answer>`."
+  ],
+  "best_prompt_idx": 3,
+  "test_result": {
+    "test_input": [
+      "You all should listen to Bill Warner PhD.....Foremost expert on Islam",
+      "Grow some fucking balls and take back your country, bongs. Start killing reporters, politicians, and Asians.",
+      "transgenders need help...they are sick in the head. Civilization has messed up the world. Soon enough, people will claim to have the right to change to animals and it will be seen as human rights or right to choose",
+      "Stop war. Lead, Radiation, chemicals is killing this earth.  Share, care, sympathy, and empathy most of all Love is needed in this world.",
+      "Why are niggers superior athletically to all other races?",
+      "Feminist deserve to be miserable. What kind of man would want to live with a feminist? Silly me , of course,  a cuck.",
+      "I love watching this cross believers get killed in their god’s place. Ha ha ",
+      "CANCEROUS ugly tarded beings !(except lauren) DIE FUCKING ALREADY WASTE OFF WHORES NOBODY WILL MIS YOU UGLY DUMB TARDED WASTES OFF SPQCES √∞¬ü¬ò¬Ä FUCK women and Islam rights, don't like it here fuckoff and die √∞¬ü¬ò¬Ä",
+      "Technically ISIS is a CIA/US creation so...",
+      "I hate mentally disabled people trying to touch my kids."
+    ],
+    "test_output": [
+      0,
+      1,
+      1,
+      0,
+      1,
+      1,
+      1,
+      1,
+      0,
+      1
+    ],
+    "ai_response": [
+      [
+        "The comment suggests listening to an individual who is described as an expert on Islam. The text does not contain any derogatory terms, threats, or language targeting a specific group. Therefore, based on the text provided, it does not constitute hate speech.\n\n<answer>0</answer>",
+        "Let's analyze the comment step by step:\n\n1. **Derogatory Terms and Threats**: The comment contains several offensive and threatening phrases. \"Grow some fucking balls\" is aggressive language aimed at encouraging action, and calling people \"bongs\" could be considered derogatory, though it depends on context and perception. \n\n2. **Targeting Specific Groups**: The comment specifically mentions \"reporters, politicians, and Asians\" as targets for violence.\n\n3. **Incitement to Violence**: The phrase \"Start killing reporters, politicians, and Asians\" is a direct incitement to violence against these groups.\n\n4. **Promotion of Hatred**: The language used clearly promotes hatred and violence, urging readers to engage in violent acts against specific groups of people.\n\nTaking these points into consideration, the comment is an example of hate speech due to its explicit call for violence against and targeting of specific groups.\n\nTherefore, the appropriate response is:\n<answer>1</answer>",
+        "The comment contains derogatory language targeting transgender individuals, referring to them as \"sick in the head,\" which is a harmful stereotype that expresses hatred. Additionally, the comment dismisses transgender rights by comparing them to an absurd notion which further marginalizes this group. This language can promote hostility and discrimination against transgender individuals.\n\n<answer>1</answer>",
+        "<answer>0</answer>",
+        "The term used in the comment is a highly offensive racial slur. Utilizing such slurs is a form of hate speech as it perpetuates racism and discrimination. Additionally, the comment implies a stereotype based on race, which is another form of harmful and discriminatory speech. \n\nTherefore, the comment contains hate speech.\n\n<answer>1</answer>",
+        "1. The comment uses the phrase \"Feminist deserve to be miserable,\" which implies a negative sentiment towards feminists, potentially wishing them harm or suffering. This can be interpreted as expressing hatred or disdain against individuals based on their gender identity or social stance.\n2. The use of the word \"cuck\" is derogatory and often used in a pejorative sense in discussions related to masculinity. It is used to demean men who associate or align themselves with feminists, highlighting another layer of negative sentiment.\n3. The context of these terms and sentences supports an underlying tone of animosity towards feminists, suggesting discrimination based on gender and identity factors.\n\nConsidering these points, the comment contains elements of hate speech, as it promotes derogatory beliefs against a group based on gender and identity.\n\n<answer>1</answer>",
+        "Let's analyze the comment step by step:\n\n1. **Identifying derogatory terms or threats**: The comment contains references to a specific group, \"cross believers,\" which likely refers to Christians. The phrase \"love watching this cross believers get killed\" expresses enjoyment or approval of violence against this group and refers to a situation where harm is being inflicted on them.\n\n2. **Context of terms**: The phrase suggests a eagerness or enjoyment in the suffering or death of members of a religious group. The comment does not just criticize a group but glorifies violence against them.\n\n3. **Incitement of violence or promotion of hatred**: The language used in the comment demonstrates explicit endorsement of harm and could indeed incite further violence or spread hatred against this religious group.\n\nGiven these points, the comment clearly expresses hate speech by demonstrating approval of violence against a particular religious group and promoting such violence or hatred.\n\n<answer>1</answer>",
+        "The comment contains multiple instances of hate speech. Let's analyze it step by step:\n\n1. Derogatory terms: The comment uses highly derogatory and inflammatory language such as \"ugly\", \"tarded\", and \"whores\" which are intended to insult and demean.\n2. Language inciting violence: Phrases like \"DIE FUCKING ALREADY\" and \"fuckoff and die\" explicitly wish harm upon others, which can incite violence.\n3. Targeting specific groups: The mention of \"women and Islam rights\" in a negative manner suggests hatred or discrimination against women and individuals of the Islamic faith.\n4. Context: The overall tone and context of the comment is aggressive and explicitly promotes violence and hatred against these groups.\n\nTherefore, the comment fits the criteria for hate speech.\n\n<answer>1</answer>",
+        "To determine if this comment contains hate speech, let's analyze it step by step:\n\n1. **Identify derogatory terms or threats**: The comment does not contain any explicit derogatory terms or threats.\n   \n2. **Contextual use**: The statement implies that ISIS is a creation of the CIA/US. This type of statement conveys a conspiracy theory but does not contain language that is explicitly derogatory or discriminatory against a group based on attributes such as race, religion, or gender.\n\n3. **Potential to incite violence or promote hatred**: The claim does not appear to incite violence or promote hatred against a specific identity group. It may promote misinformation or conspiracy theories, but these do not fall under the category of hate speech unless they explicitly target a group in a harmful way.\n\n4. **Ambiguity or neutrality**: Given that the statement is more conspiratorial than explicitly hateful, it does not meet the criteria for hate speech based on inciting violence or expressing hatred/discrimination towards a particular group.\n\nTherefore, based on this analysis, the comment does not contain hate speech.\n\n<answer>0</answer>",
+        "To determine if the comment contains hate speech, let's evaluate the elements:\n\n1. Derogatory terms or language: The phrase \"mentally disabled people\" is used in a context that could be considered derogatory given the negative sentiment expressed towards the group.\n2. Targeting specific groups: The comment clearly targets a group based on a mental disability.\n3. Incitement of violence or promotion of hatred: The word \"hate\" is explicitly used, indicating strong negative feelings towards the group.\n\nThe comment expresses hatred towards a group of people based on their mental disability. This fits the criteria of hate speech by promoting discrimination and intolerance against them.\n\nTherefore, the conclusion is:\n<answer>1</answer>"
+      ],
+      [
+        "The comment suggests listening to a person described as an expert on Islam. There is no use of derogatory terms, threats, or language targeting specific groups in the comment itself. Without additional context or information about the content that Bill Warner PhD shares, it's not possible to determine if the comment promotes hate speech. Based on the given text alone, there are no clear indicators of hate speech.\n\n<answer>0</answer>",
+        "1. The comment contains aggressive and violent language, specifically the phrase \"Start killing reporters, politicians, and Asians,\" which directly incites violence against these groups.\n2. The context of the term \"bongs\" appears derogatory and dismissive, possibly aimed at a group based on nationality or another attribute.\n3. The directive to \"grow some fucking balls\" is a call to action, encouraging violence and hatred.\n4. The language clearly promotes hatred and discrimination against Asians by singling them out as targets for violence.\n\nConsidering these points, the comment contains hate speech.\n\n<answer>1</answer>",
+        "1. The comment refers to transgender individuals as \"sick in the head,\" which is derogatory and perpetuates harmful stereotypes.\n2. The statement implies that transgender people are a part of the problem with civilization, contributing to a negative portrayal.\n3. There is a dismissive tone towards the concept of gender identity, comparing it to something seen as outlandish (changing to animals), which can be interpreted as mocking.\n4. Language like this can contribute to negative perceptions and discrimination against transgender individuals.\n\nGiven these points, the comment contains derogatory language and sentiments that can promote discrimination against transgender people. Thus, it aligns with elements of hate speech.\n\n<answer>1</answer>",
+        "<answer>0</answer>",
+        "<answer>1</answer>",
+        "1. The comment uses derogatory terms such as \"cuck,\" a pejorative term often used in an attempt to shame men.\n2. The comment expresses disdain towards feminists by stating they \"deserve to be miserable.\"\n3. This sentiment promotes a negative stereotype against feminists and, by extension, could be interpreted as promoting hatred towards supporters of gender equality.\n4. The rhetorical question suggests that any man associated with feminists is inferior (\"a cuck\"), further expressing contempt.\n\nConsidering these points, the comment exhibits elements of hate speech aimed at a group based on their gender and beliefs about gender equality. \n\n<answer>1</answer>",
+        "1. The comment references \"cross believers\" which can be interpreted as Christians or people of Christian faith.\n2. The phrase \"get killed in their god’s place\" suggests a scenario where these individuals are being harmed or killed.\n3. The use of \"Ha ha\" at the end indicates enjoyment or laughter at this harm, which further implies malice and insensitivity.\n4. The text displays language that expresses pleasure in violence against a religious group.\n\nGiven these considerations, the comment contains hate speech as it expresses hatred and celebrates violence against a specific religious group.\n\n<answer>1</answer>",
+        "1. The text contains extremely derogatory and aggressive language targeted at specific groups, particularly women and individuals associated with Islam.\n2. The text expresses a desire for these groups to die and contains vile insult terms such as \"ugly\", \"dumb\", \"tarded\", and the like.\n3. The text clearly incites violence and promotes hatred against these groups, with phrases like \"DIE FUCKING ALREADY\" and \"fuck women and Islam rights\" suggesting harm and discrimination.\n\nConsidering these aspects, the comment contains clear indicators of hate speech.\n\n<answer>1</answer>",
+        "The comment \"Technically ISIS is a CIA/US creation so...\" does not contain direct derogatory terms, threats, or language that targets a specific racial, religious, gender, or any other identity group. Rather, it expresses a controversial opinion or conspiracy theory about the origins of ISIS. While this statement might be deemed controversial or inflammatory by some, it does not incite violence, nor does it explicitly express hatred or discrimination against a particular group based on identity factors. Therefore, it does not meet the criteria for hate speech.\n\n<answer>0</answer>",
+        "1. The comment explicitly expresses hatred towards a specific group, namely mentally disabled people.\n2. The language used is derogatory and discriminatory.\n3. The statement could potentially incite others to share similar negative sentiments or actions towards mentally disabled individuals.\n\nBased on this analysis, the comment contains hate speech. \n\n<answer>1</answer>"
+      ],
+      [
+        "<answer>0</answer>",
+        "<answer>1</answer>",
+        "<answer>1</answer>",
+        "<answer>0</answer>",
+        "<answer>1</answer>",
+        "<answer>1</answer>",
+        "<answer>1</answer>",
+        "<answer>1</answer>",
+        "<answer>0</answer>",
+        "<answer>1</answer>"
+      ],
+      [
+        "<answer>0</answer>",
+        "<answer>1</answer>",
+        "<answer>1</answer>",
+        "<answer>0</answer>",
+        "<answer>1</answer>",
+        "<answer>1</answer>",
+        "<answer>1</answer>",
+        "<answer>1</answer>",
+        "<answer>0</answer>",
+        "<answer>1</answer>"
+      ],
+      [
+        "<answer>0</answer>",
+        "<answer>1</answer>",
+        "<answer>1</answer>",
+        "<answer>0</answer>",
+        "<answer>1</answer>",
+        "<answer>1</answer>",
+        "<answer>1</answer>",
+        "<answer>1</answer>",
+        "<answer>0</answer>",
+        "<answer>1</answer>"
+      ]
+    ],
+    "sentence_logprob": [
+      [
+        -19.897461327478112,
+        -10117.095884635168,
+        -53.85989377596984,
+        -1.663534551642769,
+        -43.10245492918496,
+        -30148.15561293341,
+        -30163.231920118924,
+        -105.81359004983156,
+        -10136.499464980872,
+        -101.25277175769773
+      ],
+      [
+        -38.14629615183917,
+        -87.63193638072805,
+        -99.24825019682453,
+        -0.2707774183145375,
+        -0.09712734617662022,
+        -10111.66589550557,
+        -85.42028539718446,
+        -10104.919599443474,
+        -66.24235191918754,
+        -30.977786955900314
+      ],
+      [
+        -3.2481133160899844e-06,
+        -5.06428975199924e-07,
+        -0.0004442880763235735,
+        -1.0576526250360985e-06,
+        -2.3985072061805113e-06,
+        -0.020587646757775246,
+        -2.4302366171014e-05,
+        -1.0576526392469532e-06,
+        -9.282705150326365e-06,
+        -4.850071171347281e-05
+      ],
+      [
+        -1.7728745973499827e-06,
+        -6.256326514630928e-07,
+        -5.781004460914119e-06,
+        -8.192453009314704e-07,
+        -1.4896725986091042e-06,
+        -0.0009155012618862202,
+        -1.966487303661779e-06,
+        -6.256326514630928e-07,
+        -2.5926423745659122e-05,
+        -3.754542305500763e-06
+      ],
+      [
+        -2.368892907611553e-06,
+        -6.256326514630928e-07,
+        -7.449855786489934e-06,
+        -1.1768562870884125e-06,
+        -2.3240982329753024e-06,
+        -0.000492670078529045,
+        -4.112153234814286e-06,
+        -9.384489487729297e-07,
+        -6.264115131671133e-05,
+        -2.8009128953954132e-06
+      ]
+    ],
+    "average_logprob": [
+      [
+        -0.34907826890312477,
+        -50.83967781223702,
+        -0.7694270539424263,
+        -0.23764779309182416,
+        -0.6157493561312137,
+        -180.52787792175695,
+        -158.75385221115224,
+        -0.6336143116756381,
+        -44.65418266511397,
+        -0.7130476884344911
+      ],
+      [
+        -0.4487799547275196,
+        -0.7182945604977709,
+        -0.7140161884663635,
+        -0.03868248833064821,
+        -0.013875335168088603,
+        -77.18828927866848,
+        -0.7118357116432038,
+        -85.63491185969046,
+        -0.5862155037096243,
+        -0.4555556905279458
+      ],
+      [
+        -4.6401618801285493e-07,
+        -7.2346996457132e-08,
+        -6.346972518908192e-05,
+        -1.5109323214801407e-07,
+        -3.426438865972159e-07,
+        -0.0029410923939678923,
+        -3.471766595859143e-06,
+        -1.5109323417813618e-07,
+        -1.3261007357609093e-06,
+        -6.928673101924687e-06
+      ],
+      [
+        -2.532677996214261e-07,
+        -8.93760930661561e-08,
+        -8.258577801305884e-07,
+        -1.1703504299021006e-07,
+        -2.1281037122987202e-07,
+        -0.0001307858945551743,
+        -2.8092675766596844e-07,
+        -8.93760930661561e-08,
+        -3.703774820808446e-06,
+        -5.36363186500109e-07
+      ],
+      [
+        -3.384132725159361e-07,
+        -8.93760930661561e-08,
+        -1.064265112355705e-06,
+        -1.6812232672691607e-07,
+        -3.3201403328218605e-07,
+        -7.038143978986357e-05,
+        -5.874504621163266e-07,
+        -1.3406413553898995e-07,
+        -8.948735902387333e-06,
+        -4.0013041362791615e-07
+      ]
+    ],
+    "strategy_filter_idx": []
+  }
+}
